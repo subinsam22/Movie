@@ -1,16 +1,34 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<form method="post" enctype="multipart/form-data">
+<div class="container">
+    <div class="row">
+    <div class="col-md-8 ">
+        <h4 class="text-center my_title" style="color:white">
+            Add New  movie Information below:
+        </h4>
+
+    </div>
+        <br>
+
+<div class="container">
+    <div class="row mx-auto">
+    <div class="col-2 ">
+       <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
-        <input type="text" name="name" placeholder="Enter the Movie Name"><br>
+        <input type="text" class="form_size" name="name" placeholder="Enter the Movie Name"><br>
 
-        <input  type="text" name="desc" placeholder="Enter the description of the movie"><br>
+        <input  type="text" class="form_size" name="desc" placeholder="Enter the description of the movie"><br>
 
-        <input type="text" name="year" placeholder="Enter the year"><br>
+        <input type="text" class="form_size" name="year" placeholder="Enter the year"><br>
 
-        <input type="file" name ="img" placeholder="Upload the imager"><br><br>
+        <input type="file" class="form_size" name ="img" placeholder="Upload the imager"><br><br>
         <input type="submit"  value="ADD">
 </form>
+
+    </div>
+    </div>
+</div>
+
 {% endblock body %}

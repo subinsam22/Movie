@@ -11,3 +11,19 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+h4.my_title{
+text-transform:uppercase !important;
+color:white;
+padding-top:10px;
+padding-bottom:20px;
+}
+h2.my_title{
+text-transform:uppercase !important;
+color:white;
+padding-top:10px;
+padding-bottom:20px;
+}
+.form_size
+{
+min-width:500px;
+}

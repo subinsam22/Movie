@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<br>
 <div class="container">
-    <div class="row ">
+    <div class="row">
+    <div class="col-md-8 ">
+        <h4 class="text-center my_title" style="color:white">
+            To add new movie to the list click the button
+        </h4>
+
+    </div>
+    <div class="col-md-4 ">
+        <button class="btn btn-warning"><a href="{% url 'movieapp:add_movie' %}" >Click here </a> </button>
+    </div>
+        </div>
+</div><br> <br>
+<div class="container">
+    <div class="col-md-12">
+        <h2 class="text-center my_title">Movie List</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row mx-auto">
         {% for i in movie_list %}
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card-deck">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" height="300px">
